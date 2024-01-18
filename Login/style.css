@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.All-Cont {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.P-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.Tittle {
+    font-size: large;
+}
+
+.B-container {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.Button {
+    display: block;
+    place-items: center;
+    padding: 10px;
+    border: solid gray .5px;
+    border-radius: 10px;
+    color: black;
+}
+
+input {
+    width: 80%;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.Link-FP {
+    text-decoration: none;
+    color: black;
+}
+
+.Button-Sing-in {
+    background-color: blue;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.Border-btn {
+    border: 1px solid #ffffff;
+}
+
+.Slider-cont {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: blue;
+    width: 200%;
+    height: 100%;
+}
+
+.Slider-sing-in {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    border-radius: 25px 100px 100px 25px;
+}
+
+.Slider-sing-up {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    border-radius: 100px 25px 25px 100px;
+}
