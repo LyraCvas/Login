@@ -5,31 +5,31 @@
 }
 
 body {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.All-Cont {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
-    height: 70%;
-    border-radius: 25px;
-    border: 1px solid black;
-}
-
-.P-container {
-    display: flex;
+    display: flex;    
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
+    height: 100vh;
 }
+
+.AllCont {
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 500px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.534);
+}
+
+.P-container {
+    position: absolute;
+    top: 0;
+    height: 100%;    
+    transition: all 0.6s ease-in-out;
+}
+
 
 .Tittle {
     font-size: large;
@@ -41,19 +41,24 @@ body {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.Button {
+.icon {
     display: block;
     place-items: center;
     padding: 10px;
     border: solid gray .5px;
-    border-radius: 10px;
+    border-radius: 25px;
     color: black;
+    cursor: pointer;
 }
 
 input {
-    width: 80%;
+    width: 100%;
     padding: 8px 16px;
+    margin: 8px 0;
     border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #eee;
 }
 
 .Link-FP {
@@ -61,7 +66,17 @@ input {
     color: black;
 }
 
-.Button-Sing-in {
+.AllCont form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.AllCont button {
     background-color: blue;
     padding: 15px 30px;
     border-radius: 10px;
@@ -69,40 +84,112 @@ input {
     text-decoration: none;
 }
 
-.Border-btn {
-    border: 1px solid #ffffff;
+.AllCont button.ocultar{
+    background-color: transparent;
+    border-color: #ffffff;
 }
 
-.Slider-cont {
+.AllCont.active .Slider-cont{
+    transform: translateX(-100%);
+    border-radius: 0px 150px 100px 0px;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.AllCont.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.AllCont.active .sing-up{
+    transform: translateX(150%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.Slider-cont{
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: blue;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.AllCont.active .Slider-cont{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.Slider{
+    background-color: #50a9fb;
+    height: 100%;
+    background: linear-gradient(to right,#186eff, #0054e6 );
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
     width: 200%;
-    height: 100%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
 }
 
-.Slider-sing-in {
+.AllCont.active .Slider{
+    transform: translateX(50%);
+}
+
+.Slider-sect{
     position: absolute;
+    width: 50%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 25px;
-    height: 100%;
-    border-radius: 25px 100px 100px 25px;
+    padding: 5px 35px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+
+}.Slider-sing-up{
+    transform: translateX(-200%);
 }
 
-.Slider-sing-up {
-    position: absolute;
+.AllCont.active .Slider-sing-up{
+    transform: translateX(0);
+
+}
+.Slider-sing-in{
     right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 25px;
-    height: 100%;
-    border-radius: 100px 25px 25px 100px;
+    transform: translateX(0);
+}
+
+.AllCont.active .Slider-sing-in{
+    transform: translateX(200%);
 }

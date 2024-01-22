@@ -10,49 +10,53 @@
 </head>
 
 <body>
-    <div class="All-Cont" id="All-Cont">
-        <section class="P-container">
-            <h1 class="Title">Sing In</h1>
-            <div class="B-container">
-                <a href="#" class="Button"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="Button"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="Button"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="Button"><i class="fa-brands fa-linkedin"></i></a>
+
+    <div class="AllCont" id="AllCont">
+        <section class="P-container sing-up">
+            <form action="">
+                <h1 class="Title">Create Account</h1>
+                <div class="B-container">
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <p class="Ttx">or use your email for registration</p>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>SING UP</button>
+            </form>    
+        </section>        
+        <section class="P-container sing-in">
+            <form action="">            
+                <h1 class="Title">Sing In</h1>
+                <div class="B-container">
+                    <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <p class="Ttx">or use your email password</p>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#" class="Link-FP">forgot your password?</a>
+                <button>SING IN</button>
+            </form>
+        </section>                
+        <div class="Slider-cont">        
+            <div class="Slider">
+                <section class="Slider-sect Slider-sing-in">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button class="ocultar" id="register">SING IN</button>
+                </section>
+                <section class="Slider-sect Slider-sing-up">
+                    <h1>Hello, Friend!</h1>
+                    <p>Register with your personal details to use all of site features</p>
+                    <button class="ocultar" id="login">SING UP</button>
+                </section>                
             </div>
-            <p class="Ttx">or use your email password</p>
-
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password" name="" id="">
-
-            <a href="#" class="Link-FP">forgot your password?</a>
-            <a href="#" class="Button-Sing-in">SING IN</a>
-        </section>
-        <section class="P-container">
-            <h1 class="Title">Create Account</h1>
-            <div class="B-container">
-                <a href="#" class="Button"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="Button"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#" class="Button"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="Button"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-            <p class="Ttx">or use your email for registration</p>
-
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email" name="" id="">
-            <input type="password" placeholder="Password" name="" id="">
-            <a href="#" class="Button-Sing-in">SING UP</a>
-        </section>
-        <div class="Slider-cont">
-            <section class="Slider-sing-up">
-                <h1>Hello, Friend!</h1>
-                <p>Register with your personal details to use all of site features</p>
-                <button class="Button-Sing-in Border-btn" id="loginBtn">SING UP</button>
-            </section>
-            <section class="Slider-sing-in">
-                <h1>Welcome Back!</h1>
-                <p>Enter your personal details to use all of site features</p>
-                <button class="Button-Sing-in Border-btn" id="registerBtn">SING IN</button>
-            </section>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-const container = document.getElementById('container');
+const container = document.getElementById('AllCont');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
 
